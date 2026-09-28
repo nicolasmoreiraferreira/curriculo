@@ -136,3 +136,27 @@ Sincerely,
 nikola.snay@hotmail.com · +55 13 99794-9634
 github.com/nicolasmoreiraferreira
 nicolasmoreiraferreira.github.io/portfolio
+
+---
+
+## Versão pronta para colar em formulário
+
+> Use esta quando o anúncio não trouxer um pedido específico ou quando o campo
+> de carta for curto. Ela não tem campos entre colchetes e não afirma experiência
+> que não existe.
+
+Prezada equipe de recrutamento,
+
+Sou Nicolas Moreira Ferreira, desenvolvedor full stack em São Vicente (SP), cursando Análise e Desenvolvimento de Sistemas e em busca da minha primeira oportunidade profissional na área.
+
+Ainda não atuei formalmente em empresa, mas desenvolvo e mantenho aplicações próprias em produção. Mantenho um painel financeiro web usado por clientes convidados, com front-end em React e TypeScript, API tipada em tRPC sobre Express, MySQL, validação de dados e mais de 130 testes automatizados. Também implementei lançamento de gastos por WhatsApp, com processamento idempotente para evitar transações duplicadas.
+
+Meu projeto mais recente é o Estados, uma aplicação de código aberto que força doze condições reais de API — erro de servidor, sessão expirada, ausência de permissão, falta de conexão, dado corrompido e alto volume de registros — para verificar como cada tela reage. O projeto tem 175 testes automatizados, incluindo testes de navegador em desktop e celular. Demonstração: https://nicolasmoreiraferreira.github.io/estados/ | Código: https://github.com/nicolasmoreiraferreira/estados
+
+Trabalho com React, TypeScript, Node.js, Python, APIs REST, testes automatizados, acessibilidade e integração contínua. Procuro um time no qual eu possa aprender com revisão de código, colaborar com responsabilidade e transformar o que já construí em resultados para usuários reais.
+
+Fico à disposição para uma conversa técnica e para apresentar os projetos e as decisões por trás deles.
+
+Atenciosamente,
+
+Nicolas Moreira Ferreira

@@ -1,0 +1,61 @@
+name: Publicar currículo
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  # Antes de publicar, confere que o PDF continua sendo uma página e que o
+  # texto é extraível — um currículo que virou imagem ou passou para duas
+  # páginas quebra o formulário de candidatura sem ninguém perceber.
+  validar:
+    name: validar os PDFs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Conferir páginas e extração de texto
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+          falhou=0
+          for f in site/*.pdf; do
+            paginas=$(pdfinfo "$f" | awk '/^Pages:/ {print $2}')
+            texto=$(pdftotext "$f" - | wc -c)
+            echo "$f -> $paginas página(s), $texto caracteres extraíveis"
+            [ "$paginas" = "1" ] || { echo "ERRO: $f tem $paginas páginas"; falhou=1; }
+            [ "$texto" -gt 2000 ] || { echo "ERRO: $f não tem texto extraível"; falhou=1; }
+          done
+          exit $falhou
+      - name: Conferir o site
+        run: |
+          for arq in site/index.html site/*.pdf; do
+            [ -f "$arq" ] || { echo "ERRO: falta $arq"; exit 1; }
+          done
+          echo "site completo"
+
+  publicar:
+    name: publicar o site
+    needs: validar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

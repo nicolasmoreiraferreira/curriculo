@@ -105,4 +105,4 @@ Python, tratando acessibilidade, testes e CI/CD como requisitos.
 
 == Idiomas
 
-*Português:* Nativo · *Inglês:* Básico — leio documentação técnica e acompanho comunicação escrita; iniciando curso de idioma.
+*Português:* Nativo · *Inglês:* Básico — leio documentação técnica e acompanho comunicação escrita; conversação ainda não fluente.

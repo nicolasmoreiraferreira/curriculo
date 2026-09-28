@@ -105,4 +105,4 @@ accessibility, testing and CI/CD as requirements.
 
 == Languages
 
-*Portuguese:* Native · *English:* Basic — I read technical documentation and follow written communication; currently starting a language course.
+*Portuguese:* Native · *English:* Basic — I read technical documentation and follow written communication; conversation is not yet fluent.

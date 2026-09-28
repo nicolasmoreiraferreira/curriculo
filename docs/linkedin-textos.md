@@ -52,7 +52,7 @@ Construo e mantenho software que está rodando de verdade, não só em exercíci
 
 Trabalho com JavaScript, TypeScript, Node.js, APIs REST, React, Python, banco de dados relacional e testes automatizados. Trato acessibilidade, testes e integração contínua como requisito, e não como etapa final — operações que alteram estado precisam ser seguras quando repetidas.
 
-Cursando Superior de Tecnologia em Análise e Desenvolvimento de Sistemas (Cruzeiro do Sul, conclusão em 2028). Inglês básico: leio documentação técnica e acompanho comunicação escrita, iniciando curso de idioma.
+Cursando Superior de Tecnologia em Análise e Desenvolvimento de Sistemas (Cruzeiro do Sul, conclusão em 2028). Inglês básico: leio documentação técnica e acompanho comunicação escrita; conversação ainda não fluente.
 
 Portfólio: https://nicolasmoreiraferreira.github.io/portfolio/
 Currículo: https://nicolasmoreiraferreira.github.io/curriculo/

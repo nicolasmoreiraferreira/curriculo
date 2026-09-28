@@ -105,4 +105,4 @@ front-end com React e TypeScript, o que ajuda a entender quem consome a API.
 
 == Idiomas
 
-*Português:* Nativo · *Inglês:* Básico — leio documentação técnica e acompanho comunicação escrita; iniciando curso de idioma.
+*Português:* Nativo · *Inglês:* Básico — leio documentação técnica e acompanho comunicação escrita; conversação ainda não fluente.

@@ -15,9 +15,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Antes de publicar, confere que o PDF continua sendo uma página e que o
-  # texto é extraível — um currículo que virou imagem ou passou para duas
-  # páginas quebra o formulário de candidatura sem ninguém perceber.
+  # Antes de publicar, confere que os PDFs continuam em uma página e com texto
+  # extraível — um currículo que virou imagem ou passou para duas páginas quebra
+  # o formulário de candidatura sem ninguém perceber.
+  #
+  # Currículos precisam do limite alto de texto (>2000 caracteres) porque são
+  # lidos por formulários que preenchem o perfil automaticamente. Documentos
+  # curtos por natureza, como a carta de apresentação, têm limite próprio: o que
+  # importa neles é serem legíveis por máquina, não serem longos.
   validar:
     name: validar os PDFs
     runs-on: ubuntu-latest
@@ -32,7 +37,15 @@ jobs:
             texto=$(pdftotext "$f" - | wc -c)
             echo "$f -> $paginas página(s), $texto caracteres extraíveis"
             [ "$paginas" = "1" ] || { echo "ERRO: $f tem $paginas páginas"; falhou=1; }
-            [ "$texto" -gt 2000 ] || { echo "ERRO: $f não tem texto extraível"; falhou=1; }
+            case "$f" in
+              *Carta-Apresentacao*
+                minimo=800
+                ;;
+              *)
+                minimo=2000
+                ;;
+            esac
+            [ "$texto" -gt "$minimo" ] || { echo "ERRO: $f tem $texto caracteres extraíveis, mínimo esperado é $minimo"; falhou=1; }
           done
           exit $falhou
       - name: Conferir o site

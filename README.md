@@ -49,7 +49,7 @@ imagem) e seções com títulos previsíveis: *Summary*, *Technical Skills*, *Pr
 *Education*, *Languages*.
 
 **Inglês declarado como básico.** O currículo diz exatamente o que é verdade — leio
-documentação técnica e acompanho comunicação escrita, iniciando curso. Prometer fluência e não
+documentação técnica e acompanho comunicação escrita; conversação ainda não fluente. Prometer fluência e não
 sustentar na primeira pergunta queima a candidatura inteira.
 
 **Projetos no lugar de experiência.** Não há experiência profissional formal ainda, e isso é

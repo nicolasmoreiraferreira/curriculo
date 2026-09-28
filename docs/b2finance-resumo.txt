@@ -12,7 +12,7 @@ Tecnologias: JavaScript, TypeScript, React, Node.js, Express, Python, APIs REST,
 
 Tenho interesse genuíno em Inteligência Artificial aplicada ao desenvolvimento, automação de processos e integração com APIs externas, e quero evoluir nessa direção com revisão de código de profissionais mais experientes.
 
-Curso o Superior de Tecnologia em Análise e Desenvolvimento de Sistemas (Cruzeiro do Sul, conclusão em 2028). Inglês básico: leio documentação técnica e acompanho comunicação escrita, iniciando curso de idioma.
+Curso o Superior de Tecnologia em Análise e Desenvolvimento de Sistemas (Cruzeiro do Sul, conclusão em 2028). Inglês básico: leio documentação técnica e acompanho comunicação escrita; conversação ainda não fluente.
 
 Portfólio: https://nicolasmoreiraferreira.github.io/portfolio/
 Demonstração do Estados: https://nicolasmoreiraferreira.github.io/estados/

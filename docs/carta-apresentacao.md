@@ -53,7 +53,7 @@ aprender com revisão de código e contribuir com o que já construí.
 
 Estou cursando Análise e Desenvolvimento de Sistemas (Cruzeiro do Sul Virtual,
 conclusão em 2028). Meu inglês é básico: leio documentação técnica e acompanho
-comunicação escrita, e vou iniciar curso de idioma.
+comunicação escrita; conversação ainda não fluente.
 
 Fico à disposição para uma conversa técnica, em que posso mostrar o código e
 explicar as decisões por trás dele.

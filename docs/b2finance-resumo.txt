@@ -1,0 +1,20 @@
+Desenvolvedor full stack em início de carreira, com foco em React e TypeScript no front-end e Node.js e Python no back-end. Construo e mantenho aplicações web que estão em produção, não apenas exercícios de curso, e uso esse trabalho real como base para aprender arquitetura, testes e integração entre sistemas.
+
+Meu projeto principal é um painel de controle financeiro web que começou como uso pessoal e hoje atende clientes convidados. Ele cobre o tipo de operação que a H&CO | B2Finance resolve para seus clientes: ciclo de fatura de cartões de crédito, contas fixas recorrentes e parceladas, orçamentos por categoria, metas financeiras, apuração de patrimônio (ativos e passivos), relatórios mensais e backup com restauração validada. Foi construído com React 19 e TypeScript na interface, API tipada ponta a ponta com tRPC sobre Express, banco relacional com migrations versionadas e validação de dados. Tem mais de 130 testes automatizados, e cada correção publicada entra com teste que impede a regressão.
+
+Nesse projeto resolvi o problema que julgo mais relevante para integrações: o lançamento de gastos acontece por mensagem de WhatsApp, processada por um webhook que interpreta o texto, classifica a categoria e grava a transação. O provedor reenvia notificações quando o processamento demora, e cada reenvio criava um lançamento duplicado. Tornei a gravação idempotente, usando o identificador da mensagem como chave: antes de inserir, a API verifica se aquele identificador já foi processado e devolve o resultado anterior em vez de gravar de novo. Também construí um detector que cruza lançamentos manuais, do WhatsApp e de planilha para apontar possíveis duplicidades.
+
+Mantenho também aberto o Estados, um laboratório de estados de interface que força doze condições reais de API — erro no servidor, sessão expirada, ausência de permissão, falta de conexão, dado corrompido e alto volume de registros — para verificar como cada tela reage. São 175 testes automatizados, sendo 72 de navegador, em desktop e celular. Todo consumo de API passa por um renderizador único que trata carregamento, erro e vazio, de modo que não existe caminho no código para exibir conteúdo sem tratar a falha.
+
+Em automação, desenvolvi uma plataforma desktop com mais de 190 módulos em Python que executa fluxos de trabalho em sites de forma autônoma, com sessões de navegador isoladas, concorrência com threads, recuperação de falhas parciais e pipeline de releases versionadas validado em integração contínua. Foi onde aprendi na prática arquitetura concorrente, isolamento de dados e idempotência de operações.
+
+Tecnologias: JavaScript, TypeScript, React, Node.js, Express, Python, APIs REST, JSON, banco de dados relacional, Git com branches e pull requests, testes automatizados (Vitest e Playwright) e GitHub Actions. Minha experiência em banco de dados é com MySQL e migrations versionadas; PostgreSQL é uma transição natural, pelas mesmas bases de SQL, modelagem relacional e índices.
+
+Tenho interesse genuíno em Inteligência Artificial aplicada ao desenvolvimento, automação de processos e integração com APIs externas, e quero evoluir nessa direção com revisão de código de profissionais mais experientes.
+
+Curso o Superior de Tecnologia em Análise e Desenvolvimento de Sistemas (Cruzeiro do Sul, conclusão em 2028). Inglês básico: leio documentação técnica e acompanho comunicação escrita, iniciando curso de idioma.
+
+Portfólio: https://nicolasmoreiraferreira.github.io/portfolio/
+Demonstração do Estados: https://nicolasmoreiraferreira.github.io/estados/
+GitHub: https://github.com/nicolasmoreiraferreira
+Contato: nikola.snay@hotmail.com | +55 13 99794-9634

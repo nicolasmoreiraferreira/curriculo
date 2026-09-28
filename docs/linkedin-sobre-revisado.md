@@ -4,13 +4,13 @@ Trabalho nas duas pontas de uma aplicação:
 • Front-end — interfaces com HTML semântico, CSS moderno, JavaScript/TypeScript e React, com atenção a acessibilidade, responsividade e performance.
 • Back-end — APIs tipadas, banco de dados relacional, automações e integrações em Node.js e Python.
 
-Meu projeto principal é um painel de controle financeiro web que começou como uso pessoal e passou a atender clientes convidados. Roda em produção com React 19 e TypeScript na interface, API tipada ponta a ponta com tRPC sobre Express, banco MySQL com Drizzle ORM, e lançamento de gastos por mensagem de WhatsApp: o webhook interpreta a mensagem, classifica a categoria e grava a transação com garantia de idempotência — reenvio ou resposta automática do bot não gera lançamento duplicado. Cada conta tem dados isolados, com convite nominal e credenciais próprias. São mais de 130 testes automatizados, e cada correção publicada entra com teste que impede a regressão.
+Meu projeto principal é um painel de controle financeiro web que começou como uso pessoal e passou a atender clientes convidados. Roda em produção com React 19 e TypeScript na interface, API tipada ponta a ponta com tRPC sobre Express, MySQL com Drizzle ORM e lançamento de gastos por WhatsApp. O webhook interpreta a mensagem, classifica a categoria e grava a transação com idempotência: reenvio ou resposta automática do bot não gera lançamento duplicado. Cada conta tem dados isolados, com convite nominal e credenciais próprias. São mais de 130 testes automatizados.
 
-Também mantenho aberto o Estados, um laboratório de estados de interface: a aplicação força doze condições reais de API — erro no servidor, sessão expirada, ausência de permissão, falta de conexão, dado corrompido e alto volume de registros — para verificar como cada tela reage. São 175 testes automatizados, sendo 72 de navegador, em desktop e celular. Demonstração: https://nicolasmoreiraferreira.github.io/estados/ | Código: https://github.com/nicolasmoreiraferreira/estados
+Também mantenho aberto o Estados, laboratório de estados de interface: a aplicação força doze condições reais de API — erro no servidor, sessão expirada, ausência de permissão, falta de conexão, dado corrompido e alto volume — para verificar como cada tela reage. São 175 testes automatizados, sendo 72 de navegador, em desktop e celular. Demonstração: https://nicolasmoreiraferreira.github.io/estados/ | Código: https://github.com/nicolasmoreiraferreira/estados
 
-E um sistema desktop de automação de processos web com mais de 190 módulos em Python, orquestração de sessões de navegador isoladas, concorrência com threads e pipeline de releases versionadas com validação automatizada em CI.
+Também desenvolvo um sistema desktop de automação de processos web com mais de 190 módulos em Python, sessões de navegador isoladas, concorrência com threads e pipeline de releases versionadas com validação automatizada em CI.
 
-Esses projetos me ensinaram na prática arquitetura concorrente, idempotência de operações, isolamento de dados e tratamento de falha parcial — problemas que não aparecem em exercícios de curso.
+Esses projetos me ensinaram na prática arquitetura concorrente, idempotência, isolamento de dados e tratamento de falha parcial — problemas que não aparecem em exercícios de curso.
 
 Curso o Superior de Tecnologia em Análise e Desenvolvimento de Sistemas (Cruzeiro do Sul, EAD), base formal do que já aplico: estruturas de dados, engenharia de software, banco de dados e redes.
 
@@ -18,6 +18,6 @@ Portfólio: https://nicolasmoreiraferreira.github.io/portfolio/
 Currículo (PDF): https://nicolasmoreiraferreira.github.io/curriculo/
 GitHub: https://github.com/nicolasmoreiraferreira
 
-O que busco: um time com revisão de código e feedback técnico estruturado, onde eu possa entregar com qualidade e evoluir rápido. Disponível para presencial na Baixada Santista e em São Paulo capital, híbrido ou remoto.
+Busco um time com revisão de código e feedback técnico estruturado, onde eu possa entregar com qualidade e evoluir rápido. Disponível para presencial na Baixada Santista e em São Paulo capital, híbrido ou remoto.
 
 Aberto a conversas sobre oportunidades: nikola.snay@hotmail.com

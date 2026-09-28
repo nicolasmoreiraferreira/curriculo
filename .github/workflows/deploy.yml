@@ -38,7 +38,7 @@ jobs:
             echo "$f -> $paginas página(s), $texto caracteres extraíveis"
             [ "$paginas" = "1" ] || { echo "ERRO: $f tem $paginas páginas"; falhou=1; }
             case "$f" in
-              *Carta-Apresentacao*
+              *Carta-Apresentacao*)
                 minimo=800
                 ;;
               *)

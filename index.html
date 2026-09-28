@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nicolas Moreira Ferreira — Currículo</title>
+    <meta
+      name="description"
+      content="Currículo de Nicolas Moreira Ferreira, desenvolvedor full stack. Versões em português e inglês para download, e o currículo completo em HTML."
+    />
+    <meta name="author" content="Nicolas Moreira Ferreira" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Dados estruturados: ajudam buscadores a entender que esta é uma página
+         de currículo e a associá-la à mesma pessoa do portfólio. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nicolas Moreira Ferreira",
+        "jobTitle": "Desenvolvedor Full Stack",
+        "email": "mailto:nikola.snay@hotmail.com",
+        "telephone": "+55 13 99794-9634",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São Vicente",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "url": "https://nicolasmoreiraferreira.github.io/curriculo/",
+        "sameAs": [
+          "https://github.com/nicolasmoreiraferreira",
+          "https://www.linkedin.com/in/nicolasmoreiraferreira/",
+          "https://nicolasmoreiraferreira.github.io/portfolio/"
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Cruzeiro do Sul Virtual"
+        },
+        "knowsAbout": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "MySQL",
+          "Python",
+          "Acessibilidade",
+          "Testes automatizados"
+        ]
+      }
+    </script>
+
+    <style>
+      /* Tokens do tema. O currículo é o único conteúdo da página, então a
+         tipografia carrega o peso: uma serifada para leitura longa e uma
+         sans para rótulos curtos. */
+      :root {
+        --cor-texto: #16181d;
+        --cor-fraca: #5b6270;
+        --cor-borda: #e3e6ec;
+        --cor-fundo: #ffffff;
+        --cor-fundo-alt: #f7f8fa;
+        --cor-acento: #0f4c81;
+        --largura: 46rem;
+        --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+        --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --cor-texto: #e8eaee;
+          --cor-fraca: #a2aab8;
+          --cor-borda: #2a2f39;
+          --cor-fundo: #111318;
+          --cor-fundo-alt: #181b22;
+          --cor-acento: #7fb3e8;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 2.5rem 1.25rem 4rem;
+        background: var(--cor-fundo);
+        color: var(--cor-texto);
+        font-family: var(--serif);
+        font-size: 17px;
+        line-height: 1.55;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      .pagina {
+        max-width: var(--largura);
+        margin: 0 auto;
+      }
+
+      /* Link de pular para o conteúdo: quem navega por teclado não deve
+         atravessar o cabeçalho inteiro em toda visita. */
+      .pular {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        background: var(--cor-acento);
+        color: #fff;
+        padding: 0.6rem 1rem;
+        border-radius: 0 0 6px 0;
+        font-family: var(--sans);
+        font-size: 0.9rem;
+      }
+      .pular:focus {
+        left: 0;
+        z-index: 10;
+      }
+
+      header {
+        border-bottom: 2px solid var(--cor-texto);
+        padding-bottom: 1rem;
+        margin-bottom: 1.75rem;
+      }
+
+      h1 {
+        margin: 0 0 0.35rem;
+        font-size: 2rem;
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+      }
+
+      .cargo {
+        margin: 0 0 0.75rem;
+        font-family: var(--sans);
+        font-size: 0.95rem;
+        color: var(--cor-fraca);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .contatos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 0.9rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: var(--sans);
+        font-size: 0.88rem;
+      }
+
+      .contatos li {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+
+      /* Separador entre contatos, invisível para leitores de tela. */
+      .contatos li + li::before {
+        content: "";
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: var(--cor-fraca);
+        margin-right: 0.2rem;
+      }
+
+      a {
+        color: var(--cor-acento);
+        text-underline-offset: 0.15em;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--cor-acento);
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+
+      .baixar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin: 1.5rem 0 0;
+        padding: 1.1rem 1.25rem;
+        background: var(--cor-fundo-alt);
+        border: 1px solid var(--cor-borda);
+        border-radius: 8px;
+        font-family: var(--sans);
+      }
+
+      .baixar p {
+        margin: 0 0 0.5rem;
+        flex-basis: 100%;
+        font-size: 0.9rem;
+        color: var(--cor-fraca);
+      }
+
+      .botao {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.55rem 1rem;
+        background: var(--cor-acento);
+        color: #fff;
+        border: 0;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .botao.secundario {
+        background: transparent;
+        color: var(--cor-acento);
+        border: 1px solid var(--cor-acento);
+      }
+
+      .botao:hover {
+        filter: brightness(1.08);
+      }
+
+      section {
+        margin-bottom: 1.6rem;
+      }
+
+      h2 {
+        margin: 0 0 0.6rem;
+        font-family: var(--sans);
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--cor-acento);
+        border-bottom: 1px solid var(--cor-borda);
+        padding-bottom: 0.3rem;
+      }
+
+      p {
+        margin: 0 0 0.7rem;
+      }
+
+      ul {
+        margin: 0.35rem 0 0;
+        padding-left: 1.1rem;
+      }
+
+      li {
+        margin-bottom: 0.28rem;
+      }
+
+      /* Cada projeto: título e período na mesma linha quando cabe, e a
+         descrição abaixo. Em tela estreita o período desce sozinho. */
+      .projeto {
+        margin-bottom: 1.05rem;
+      }
+
+      .projeto-cabecalho {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.25rem 0.75rem;
+        justify-content: space-between;
+      }
+
+      .projeto-titulo {
+        font-weight: 700;
+        font-size: 1rem;
+      }
+
+      .projeto-periodo {
+        font-family: var(--sans);
+        font-size: 0.8rem;
+        color: var(--cor-fraca);
+        white-space: nowrap;
+      }
+
+      .projeto-cargo {
+        font-style: italic;
+        color: var(--cor-fraca);
+      }
+
+      .competencias {
+        display: grid;
+        gap: 0.3rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .competencias strong {
+        font-family: var(--sans);
+        font-size: 0.88rem;
+      }
+
+      .formacao {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.15rem 1rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .formacao .instituicao {
+        font-weight: 700;
+      }
+
+      .formacao .detalhe {
+        font-style: italic;
+        color: var(--cor-fraca);
+      }
+
+      .formacao .periodo {
+        font-family: var(--sans);
+        font-size: 0.8rem;
+        color: var(--cor-fraca);
+        white-space: nowrap;
+      }
+
+      footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--cor-borda);
+        font-family: var(--sans);
+        font-size: 0.82rem;
+        color: var(--cor-fraca);
+      }
+
+      @media print {
+        /* Impressão: quem salvar a página como PDF deve obter o mesmo
+           documento do arquivo, sem botões nem cores de interface. */
+        body {
+          padding: 0;
+          font-size: 10.5pt;
+        }
+        .baixar,
+        .pular,
+        footer {
+          display: none;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+        h2 {
+          color: #000;
+        }
+        section {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <main class="pagina" id="conteudo">
+      <header>
+        <h1>Nicolas Moreira Ferreira</h1>
+        <p class="cargo">Desenvolvedor Full Stack</p>
+        <ul class="contatos">
+          <li>São Vicente, São Paulo, Brasil</li>
+          <li><a href="mailto:nikola.snay@hotmail.com">nikola.snay@hotmail.com</a></li>
+          <li><a href="tel:+5513997949634">+55 13 99794-9634</a></li>
+          <li>
+            <a href="https://github.com/nicolasmoreiraferreira" rel="me noopener">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/nicolasmoreiraferreira/" rel="me noopener">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://nicolasmoreiraferreira.github.io/portfolio/" rel="noopener">Portfólio</a>
+          </li>
+        </ul>
+
+        <div class="baixar">
+          <p>Baixe o currículo em PDF — uma página, pronto para sistemas de recrutamento:</p>
+          <a class="botao" href="Nicolas-Moreira-Ferreira-Curriculo-PT.pdf" download>
+            Currículo em português (PDF)
+          </a>
+          <a class="botao secundario" href="Nicolas-Moreira-Ferreira-Curriculum-EN.pdf" download>
+            Resume in English (PDF)
+          </a>
+        </div>
+      </header>
+
+      <section aria-labelledby="resumo">
+        <h2 id="resumo">Resumo</h2>
+        <p>
+          Desenvolvedor full stack que constrói e mantém aplicações web de ponta a ponta:
+          interfaces em React e TypeScript, APIs tipadas, banco de dados relacional e testes
+          automatizados. Mantenho em produção um painel financeiro e uma plataforma de automação
+          com mais de 190 módulos em Python, tratando acessibilidade, testes e CI/CD como
+          requisitos.
+        </p>
+      </section>
+
+      <section aria-labelledby="competencias">
+        <h2 id="competencias">Competências técnicas</h2>
+        <ul class="competencias">
+          <li>
+            <strong>Front-end:</strong> HTML5, CSS3, JavaScript (ES2022+), TypeScript, React,
+            Vite, Tailwind CSS, responsividade, acessibilidade (WCAG)
+          </li>
+          <li>
+            <strong>Back-end e dados:</strong> Node.js, Express, tRPC, APIs REST, MySQL, Drizzle
+            ORM, Zod, Python
+          </li>
+          <li>
+            <strong>Testes e qualidade:</strong> Vitest, Testing Library, Playwright, ESLint,
+            TypeScript em modo estrito
+          </li>
+          <li>
+            <strong>Ferramentas e DevOps:</strong> Git, GitHub, GitHub Actions (CI/CD),
+            PyInstaller, extensões de navegador (Manifest V3)
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="projetos">
+        <h2 id="projetos">Projetos</h2>
+
+        <article class="projeto">
+          <div class="projeto-cabecalho">
+            <span class="projeto-titulo">Painel Financeiro</span>
+            <span class="projeto-periodo">Jul 2026 — Atual</span>
+          </div>
+          <p class="projeto-cargo">
+            Desenvolvedor Full Stack ·
+            <a href="https://controlefinanceirosnay.com" rel="noopener">controlefinanceirosnay.com</a>
+          </p>
+          <ul>
+            <li>
+              API tipada ponta a ponta com tRPC sobre Express, persistindo em MySQL via Drizzle
+              ORM, com migrations versionadas e validação por Zod.
+            </li>
+            <li>
+              Lançamento de gastos por mensagem de WhatsApp: um webhook interpreta valor,
+              categoria e cartão a partir de texto livre, e a gravação é idempotente por
+              identificador de mensagem — reenvio nunca duplica uma transação.
+            </li>
+            <li>
+              Lógica de domínio em funções puras testadas isoladamente (ciclo de fatura, saldo,
+              orçamentos, metas), com mais de 130 testes automatizados, checagem de tipos e build
+              a cada entrega.
+            </li>
+            <li>
+              Dados isolados por conta — convite nominal, painel inicial vazio, credenciais de
+              sincronização próprias. Código privado (dados financeiros reais);
+              <a href="https://github.com/nicolasmoreiraferreira/controle-financeiro" rel="noopener">
+                vitrine técnica</a
+              >.
+            </li>
+          </ul>
+        </article>
+
+        <article class="projeto">
+          <div class="projeto-cabecalho">
+            <span class="projeto-titulo">BOTSNAY — Plataforma de automação de processos web</span>
+            <span class="projeto-periodo">2026 — Atual</span>
+          </div>
+          <p class="projeto-cargo">Desenvolvedor</p>
+          <ul>
+            <li>
+              Plataforma desktop que executa fluxos de trabalho em sites de forma autônoma, com
+              mais de 190 módulos em Python.
+            </li>
+            <li>
+              Sessões isoladas de navegador com Playwright para execução paralela sem
+              interferência, tratando threads, persistência de estado e recuperação de falhas
+              parciais.
+            </li>
+            <li>
+              Empacotamento para Windows com pipeline de releases versionadas validado em GitHub
+              Actions, além de licenciamento e atualização automática para usuários finais sem
+              suporte técnico.
+            </li>
+          </ul>
+        </article>
+
+        <article class="projeto">
+          <div class="projeto-cabecalho">
+            <span class="projeto-titulo">Estados — laboratório de estados de interface</span>
+            <span class="projeto-periodo">2026 — Atual</span>
+          </div>
+          <p class="projeto-cargo">
+            Desenvolvedor Front-end ·
+            <a href="https://github.com/nicolasmoreiraferreira/estados" rel="noopener">código aberto</a>
+          </p>
+          <ul>
+            <li>
+              Aplicação de código aberto em React 19 e TypeScript que força doze condições reais
+              de API — erro no servidor, sessão expirada, sem permissão, sem conexão, dado
+              corrompido, cinco mil registros — para verificar cada tela sob demanda.
+            </li>
+            <li>
+              Renderizador único de estados que não deixa caminho para exibir conteúdo sem tratar
+              carregamento, erro e vazio, cobrado por testes nas quatro telas.
+            </li>
+            <li>
+              175 testes automatizados (103 unitários, 72 de navegador) em desktop e celular, com
+              virtualização de lista que mantém 20 linhas no DOM de 5.004.
+            </li>
+          </ul>
+        </article>
+
+        <article class="projeto">
+          <div class="projeto-cabecalho">
+            <span class="projeto-titulo">Convite Digital com confirmação de presença</span>
+            <span class="projeto-periodo">Jul 2026</span>
+          </div>
+          <p class="projeto-cargo">Desenvolvedor Full Stack</p>
+          <ul>
+            <li>
+              Site de evento usado de verdade por dezenas de famílias, com contagem regressiva em
+              tempo real e confirmação de presença online separando adultos e crianças, validada
+              e gravada no servidor.
+            </li>
+            <li>
+              Painel do dono com totais consolidados, inclusão manual de convidados e controle de
+              prazo que passa o site para o modo "falar com o responsável" quando encerra.
+            </li>
+          </ul>
+        </article>
+
+        <article class="projeto">
+          <div class="projeto-cabecalho">
+            <span class="projeto-titulo">Portfólio pessoal</span>
+            <span class="projeto-periodo">2026 — Atual</span>
+          </div>
+          <p class="projeto-cargo">
+            Desenvolvedor Front-end ·
+            <a href="https://nicolasmoreiraferreira.github.io/portfolio/" rel="noopener">
+              nicolasmoreiraferreira.github.io/portfolio</a
+            >
+          </p>
+          <ul>
+            <li>
+              React, TypeScript, Vite e Tailwind CSS, com deploy contínuo no GitHub Pages via
+              GitHub Actions, tratando acessibilidade, responsividade e dados estruturados
+              (JSON-LD).
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section aria-labelledby="formacao">
+        <h2 id="formacao">Formação</h2>
+        <div class="formacao">
+          <div>
+            <span class="instituicao">Cruzeiro do Sul Virtual</span><br />
+            <span class="detalhe"
+              >Superior de Tecnologia em Análise e Desenvolvimento de Sistemas (em andamento)</span
+            >
+          </div>
+          <span class="periodo">2026 — 2028</span>
+        </div>
+        <div class="formacao">
+          <div>
+            <span class="instituicao">Curso em Vídeo</span><br />
+            <span class="detalhe">Desenvolvimento Front-end: HTML5, CSS3 e JavaScript</span>
+          </div>
+          <span class="periodo">2023</span>
+        </div>
+      </section>
+
+      <section aria-labelledby="idiomas">
+        <h2 id="idiomas">Idiomas</h2>
+        <p>
+          <strong>Português:</strong> nativo · <strong>Inglês:</strong> básico — leio
+          documentação técnica e acompanho comunicação escrita; iniciando curso de idioma.
+        </p>
+      </section>
+
+      <footer>
+        <p>
+          Este currículo também existe em
+          <a href="Nicolas-Moreira-Ferreira-Curriculum-EN.pdf" download>inglês (PDF)</a>. Última
+          atualização: setembro de 2026.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

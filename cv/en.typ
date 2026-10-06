@@ -61,6 +61,14 @@ accessibility, testing and CI/CD as requirements.
 - Packaged for Windows with a versioned release pipeline validated in GitHub Actions, plus licensing and automatic updates for non-technical end users.
 
 #project(
+  name: "AI Agent Guardrails",
+  role: "Author",
+  dates: dates-helper(start-date: "2026", end-date: "Present"),
+  url: "github.com/nicolasmoreiraferreira/ia-guardrails",
+)
+- Built the control layer that lets an AI agent write code in a production system without access to credentials, customer data or browser sessions: write blocked on sensitive paths before it happens, secret scanning on every approved write and independent reviewers required to return an explicit verdict.
+
+#project(
   name: "Estados — UI States Lab",
   role: "Front-end Developer",
   dates: dates-helper(start-date: "2026", end-date: "Present"),
@@ -76,14 +84,6 @@ accessibility, testing and CI/CD as requirements.
   dates: dates-helper(start-date: "Jul 2026", end-date: "Jul 2026"),
 )
 - Built an event site used by dozens of families, with real-time countdown and online RSVP separating adults from children, validated and stored server-side, plus an owner dashboard with consolidated totals.
-
-#project(
-  name: "Personal Portfolio",
-  role: "Front-end Developer",
-  dates: dates-helper(start-date: "2026", end-date: "Present"),
-  url: "nicolasmoreiraferreira.github.io/portfolio",
-)
-- Built with React, TypeScript, Vite and Tailwind CSS, deployed continuously to GitHub Pages through GitHub Actions, with accessibility, responsive design and JSON-LD structured data.
 
 == Education & certifications
 

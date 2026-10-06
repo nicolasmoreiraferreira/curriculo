@@ -61,6 +61,14 @@ front-end com React e TypeScript, o que ajuda a entender quem consome a API.
 - Empacotei para Windows com pipeline de releases versionadas validado em GitHub Actions, além de licenciamento e atualização automática para usuários finais sem suporte técnico.
 
 #project(
+  name: "Guardrails para agentes de IA",
+  role: "Autor",
+  dates: dates-helper(start-date: "2026", end-date: "Atual"),
+  url: "github.com/nicolasmoreiraferreira/ia-guardrails",
+)
+- Construí a camada de controle que permite a um agente de IA escrever código em produção sem acesso a credenciais, dados de clientes ou sessões: bloqueio de escrita antes que aconteça, varredura de segredos na saída e revisores independentes com veredito obrigatório.
+
+#project(
   name: "Estados — laboratório de estados de interface",
   role: "Desenvolvedor Front-end",
   dates: dates-helper(start-date: "2026", end-date: "Atual"),
@@ -76,14 +84,6 @@ front-end com React e TypeScript, o que ajuda a entender quem consome a API.
   dates: dates-helper(start-date: "Jul 2026", end-date: "Jul 2026"),
 )
 - Construí um site de evento usado de verdade por dezenas de famílias, com contagem regressiva em tempo real e confirmação de presença online separando adultos e crianças, validada e gravada no servidor, além de painel do dono com totais consolidados.
-
-#project(
-  name: "Portfólio pessoal",
-  role: "Desenvolvedor Front-end",
-  dates: dates-helper(start-date: "2026", end-date: "Atual"),
-  url: "nicolasmoreiraferreira.github.io/portfolio",
-)
-- Construí com React, TypeScript, Vite e Tailwind CSS, com deploy contínuo no GitHub Pages via GitHub Actions, tratando acessibilidade, responsividade e dados estruturados (JSON-LD).
 
 == Formação e certificações
 
@@ -113,4 +113,4 @@ front-end com React e TypeScript, o que ajuda a entender quem consome a API.
 
 == Idiomas
 
-*Português:* Nativo · *Inglês:* Básico — leio documentação técnica e acompanho comunicação escrita; conversação ainda não fluente.
+*Português:* Nativo · *Inglês:* Básico — leitura técnica e comunicação escrita; conversação em desenvolvimento.

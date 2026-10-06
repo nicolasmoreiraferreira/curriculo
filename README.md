@@ -68,6 +68,12 @@ problema, decisão técnica e resultado mensurável.
 resolvido. "Mais de 130 testes automatizados" e "idempotente por identificador de mensagem"
 dizem mais que "aprendi React".
 
+**Uma página obriga a escolher.** O espaço é disputado, então cada entrada precisa se pagar.
+Quando os guardrails de agentes de IA entraram, a entrada do portfólio pessoal saiu no lugar
+dela: o link do portfólio já está no cabeçalho, e repeti-lo como projeto ocupa uma linha
+inteira sem dizer nada que o recrutador ainda não saiba. A camada de controle de IA, em
+contrapartida, é o que menos aparece em currículo de quem está começando.
+
 ## Licença
 
 O conteúdo é pessoal e não deve ser reutilizado como currículo por outra pessoa.

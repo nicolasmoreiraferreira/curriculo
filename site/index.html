@@ -38,6 +38,18 @@
           "@type": "CollegeOrUniversity",
           "name": "Cruzeiro do Sul Virtual"
         },
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Explorador do Universo Digital e IA",
+          "description": "Badge de 4 horas sobre fundamentos de hardware e software, pensamento computacional, lógica de algoritmos, arquitetura de internet e nuvem e ética em inteligência artificial.",
+          "credentialCategory": "Badge de curso de extensão",
+          "competencyRequired": "Pensamento Computacional, Fundamentos de Hardware e Software, Lógica de Algoritmo, Arquitetura de Internet e Nuvem, Ética em Inteligência Artificial",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidade Cruzeiro do Sul"
+          },
+          "identifier": "a2fb632a-1477-480f-9cec-05a4f753d802"
+        },
         "knowsAbout": [
           "React",
           "TypeScript",
@@ -45,7 +57,9 @@
           "MySQL",
           "Python",
           "Acessibilidade",
-          "Testes automatizados"
+          "Testes automatizados",
+          "Inteligência Artificial",
+          "Computação em nuvem"
         ]
       }
     </script>
@@ -317,6 +331,13 @@
         white-space: nowrap;
       }
 
+      .formacao .credencial {
+        font-family: var(--sans);
+        font-size: 0.78rem;
+        color: var(--cor-fraca);
+        word-break: break-all;
+      }
+
       footer {
         margin-top: 2rem;
         padding-top: 1rem;
@@ -552,7 +573,7 @@
       </section>
 
       <section aria-labelledby="formacao">
-        <h2 id="formacao">Formação</h2>
+        <h2 id="formacao">Formação e certificações</h2>
         <div class="formacao">
           <div>
             <span class="instituicao">Cruzeiro do Sul Virtual</span><br />
@@ -569,6 +590,20 @@
           </div>
           <span class="periodo">2023</span>
         </div>
+        <div class="formacao">
+          <div>
+            <span class="instituicao">Explorador do Universo Digital e IA</span><br />
+            <span class="detalhe"
+              >Badge da Universidade Cruzeiro do Sul: fundamentos de hardware e software, lógica de
+              algoritmos, arquitetura de internet e computação em nuvem e ética em inteligência
+              artificial.</span
+            ><br />
+            <span class="credencial"
+              >Código de autenticação: a2fb632a-1477-480f-9cec-05a4f753d802</span
+            >
+          </div>
+          <span class="periodo">4h · out/2026</span>
+        </div>
       </section>
 
       <section aria-labelledby="idiomas">
@@ -583,7 +618,7 @@
         <p>
           Este currículo também existe em
           <a href="Nicolas-Moreira-Ferreira-Curriculum-EN.pdf" download>inglês (PDF)</a>. Última
-          atualização: setembro de 2026.
+          atualização: outubro de 2026.
         </p>
       </footer>
     </main>

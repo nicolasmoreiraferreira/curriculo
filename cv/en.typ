@@ -18,7 +18,7 @@
   personal-site: personal-site,
   accent-color: "#0f4c81",
   font: "New Computer Modern",
-  font-size: 9.5pt,
+  font-size: 9.2pt,
   paper: "a4",
   author-position: left,
   personal-info-position: left,
@@ -85,7 +85,7 @@ accessibility, testing and CI/CD as requirements.
 )
 - Built with React, TypeScript, Vite and Tailwind CSS, deployed continuously to GitHub Pages through GitHub Actions, with accessibility, responsive design and JSON-LD structured data.
 
-== Education
+== Education & certifications
 
 #edu(
   institution: "Cruzeiro do Sul Virtual",
@@ -102,6 +102,14 @@ accessibility, testing and CI/CD as requirements.
   degree: "Front-End Development: HTML5, CSS3 and JavaScript",
   consistent: true,
 )
+
+#certificates(
+  name: "Digital Universe and AI Explorer",
+  issuer: "Cruzeiro do Sul University",
+  date: "4h · Oct 2026",
+)
+\
+#text(size: 8.5pt)[Hardware and software, algorithms, internet and cloud and AI ethics · Verification code: a2fb632a-1477-480f-9cec-05a4f753d802]
 
 == Languages
 

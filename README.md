@@ -43,6 +43,14 @@ cp pdf/*.pdf site/
 um minuto. Uma segunda página quase vazia passa a impressão de que falta conteúdo — melhor
 condensar em uma página densa e legível.
 
+Ao entrar a certificação, o corpo do texto passou de 9,5pt para 9,2pt: era a forma de manter
+todo o conteúdo existente em uma página, sem cortar projeto nem competência. Continua confortável
+para leitura e o pipeline de publicação recusa qualquer versão que passe para duas páginas.
+
+**Certificação com código de autenticação.** A badge aparece dentro de *Formação e certificações*,
+com a carga horária real (4h) e o código de autenticação, para que quem lê possa conferir. Curso
+sem comprovação não entra.
+
 **Feito para leitura por máquina.** O formulário da Globant recebe o PDF e preenche o perfil
 automaticamente. Por isso o layout é de coluna única, com texto extraível de verdade (não
 imagem) e seções com títulos previsíveis: *Summary*, *Technical Skills*, *Projects*,

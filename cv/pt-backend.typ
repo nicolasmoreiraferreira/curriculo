@@ -18,7 +18,7 @@
   personal-site: personal-site,
   accent-color: "#0f4c81",
   font: "New Computer Modern",
-  font-size: 9.5pt,
+  font-size: 9.2pt,
   paper: "a4",
   author-position: left,
   personal-info-position: left,
@@ -85,7 +85,7 @@ front-end com React e TypeScript, o que ajuda a entender quem consome a API.
 )
 - Construí com React, TypeScript, Vite e Tailwind CSS, com deploy contínuo no GitHub Pages via GitHub Actions, tratando acessibilidade, responsividade e dados estruturados (JSON-LD).
 
-== Formação
+== Formação e certificações
 
 #edu(
   institution: "Cruzeiro do Sul Virtual",
@@ -102,6 +102,14 @@ front-end com React e TypeScript, o que ajuda a entender quem consome a API.
   degree: "Desenvolvimento Front-end: HTML5, CSS3 e JavaScript",
   consistent: true,
 )
+
+#certificates(
+  name: "Explorador do Universo Digital e IA",
+  issuer: "Universidade Cruzeiro do Sul",
+  date: "4h · out/2026",
+)
+\
+#text(size: 8.5pt)[Hardware e software, algoritmos, internet e nuvem e ética em IA · Autenticação: a2fb632a-1477-480f-9cec-05a4f753d802]
 
 == Idiomas
 
